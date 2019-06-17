@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Selecionar Elementos #04</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body class="conteudo exercicio">
+    <div>
+        <p>Início</p>
+    </div>
+    <div>
+        <ul>
+            <li>Pedro</li>
+            <li>Ana</li>
+            <li>Bia</li>
+        </ul>
+    </div>
+    <div>
+        <p>Fim</p>
+    </div>
+    <script>
+        // Função para exibir no console o elemento que foi selecionado
+        function log(){
+            console.log(this)
+        }
+
+        HTMLCollection.prototype.log = log
+        HTMLElement.prototype.log = log
+        NodeList.prototype.log = log
+        Node.prototype.log = log
+
+        const lista = document.querySelector('div ul')
+        lista.parentNode.log() // exibe o elemento pai e os filhos
+        lista.childNodes.log() // exibe todos os filhos do elemento (porem com os textos tambem)
+
+        const primeiro = lista.firstChild //pega o primeiro filho do elemento
+        primeiro.log() // exibe o primeiro filho
+        primeiro.nextSibling.log() //exibe o proximo filho
+        
+        const ultimo = lista.lastChild // pega o ultimo filho do elemento
+        ultimo.log() // exibe o ultimo filho
+        ultimo.previousSibling.log() // exibe o filho anterior
+
+        lista.children.log() //pega todos os filhos (ignorando os textos, pega apenas as tags)
+        lista.firstElementChild.log() // pega o primeiro filho que seja um elemento (tag)
+        lista.lastElementChild.log() //pega o ultimo filho que seja um elemento(tag)
+        
+        // parentNode é o elemento pai, no exemplo abaixo sera pego o irmão anterior do elemento pai
+        lista.parentNode.previousElementSibling.log()
+        lista.parentNode.nextElementSibling.log()
+
+        //pegando os elementos li direto
+        document.querySelectorAll('div ul li').log()
+
+    </script>
+</body>
+
+</html>

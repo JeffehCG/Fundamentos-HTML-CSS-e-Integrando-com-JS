@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Selecionar Elementos #03</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        form input,
+        form select,
+        form button {
+            margin: 10px;
+            font-size: 1.6em;
+        }
+    </style>
+</head>
+
+<body class="conteudo exercicio">
+    <h1>Formulário</h1>
+    <form name="pesquisa" action="http://www.google.com.br/search">
+        <input type="text" name="q" placeholder="Digite o termo...">
+        <select name="hl">
+            <option value="pt-br">Português (Brasil)</option>
+            <option value="en-us">Inglês (Americano)</option>
+        </select>
+        <button>Pesquisar</button>
+    </form>
+    <script>
+        console.log(document.forms) // HTMLCollection com todos formularios
+        console.log(document.forms[0]) //exibindo primeiro elemento do HTMLCollection
+
+        console.log(document.getElementsByName('pesquisa')) //Node list com todos elementos com nome 'pesquisa'
+        console.log(document.pesquisa) //Pega o elemento com nome pesquisa
+        console.log(document.pesquisa.q) //Pegando o input com nome q, dentro do formulario pesquisa
+
+        // Colocando um valor dentro do elemento
+        document.pesquisa.q.value = 'Linux Brasil' // dentro do input q
+        document.pesquisa.hl.value = 'en-us'       // dentro do select hl
+
+        console.log(document.pesquisa.hl.selectedIndex) // mosta o index do elemento que esta selecionado
+    </script>
+</body>
+
+</html>

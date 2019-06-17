@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Unidades #01</title>
+    <style>
+        .unidades-absolutas { /*Mesmo alterando as configurações do browser, não sofre nenhum alteração*/
+            position: absolute; 
+            font-size: 40px;
+            padding: 20px;
+            border: solid 5px #222;
+            margin: 30px;
+            width: 4cm; /*Unidade cm é pouco usada*/
+            height: 20mm; /*Unidade mm é pouco usada*/
+            /* as propriedades top e left so funcionam com o possition: absolute ativo */
+            top: 150px;
+            left: 200px;
+        }
+
+        .unidades-relativas{ /*Sofre alteração com a mudança de configurações no browser*/
+            position: absolute;
+            font-size: 4em;
+            padding: 5%;
+            border: solid 1vw #222;
+            margin: .8%;
+            width: 20vw;/*vw - pega o tamnho da largura do view port*/
+            height: 15vh; /*vh - pega o tamanho da altura do view port, e divide por 100, ou seja, 50vh ira ser a metade*/
+            bottom: 5%;
+            right: 5%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="unidades-absolutas">Opa!</div>
+    <div class="unidades-relativas">Epa!</div>
+</body>
+
+</html>

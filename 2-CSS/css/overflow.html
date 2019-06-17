@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Overflow</title>
+    <style>
+        /* Overflow - Quando o elemento não suporta a quantidade de conteudo ou caracter dentro
+            dessa forma parte dos caracteres ficam para fora */
+        
+        div {
+            font-size: 40px;
+            height: 100px;
+            width: 260px;
+            border: solid 3px;
+            overflow: hidden; /*Tudo que estrapolou a div não ira aparecer*/
+            overflow:scroll ; /*Cria uma barra de rolagem dentro da div*/
+            overflow-x: scroll; /*Cria a barra de rolagem apenas no sentindo x*/
+            overflow-y: hidden; /*Bloqueia o sentido Y, para aparecer apenas a x*/
+        }
+    </style>
+</head>
+<body>
+    <div>
+        TudoFuncionaMuitoBemEmCSS!!!
+        Texto muito grande para caber nessa div.
+        Já pensou qual será o comportamento padrão?
+    </div>
+</body>
+</html>

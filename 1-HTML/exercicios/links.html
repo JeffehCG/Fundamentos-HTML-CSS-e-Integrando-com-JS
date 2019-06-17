@@ -1,0 +1,24 @@
+<h1>Links</h1>
+
+<!-- URL Absoluto-->
+<a id="inicio" href="https://www.google.com.br">Direcionar pagina para google</a> <br>
+<a href="https://www.google.com.br" target="_blank">Abrir o google em nova guia</a><hr>
+
+<!-- URL Relativa -->
+<a href="index.html">Voltar 1</a> <!-- Procura arquivo mesma pasta --> 
+<a href="/index.html">Voltar 2</a><!-- Procura o arquivo na pasta Raiz do servidor-->
+<a href="../../index.html">Voltar 3</a><!-- ".." Volta para pasta anterior, e procura por index.html-->
+
+<!-- Link direto para Email --> <br><br>
+<a href="mailto:email@empresa.com.br">Entre em contato </a> <hr>
+
+<!-- CSS in line -->
+<!--div#noticia = cria a div com id noticia-->
+<div id="noticia" style="position: absolute;top: 2000px;"> <!-- posiciona essa div no final da pagina-->
+    <h1>Noticia Buena</h1>
+    <p>Não era nada ...</p>
+    <a href="#inicio">Inicio</a>
+</div>
+
+<!-- Navegação dentro da propria pagina-->
+<a href="#noticia">Ir para noticia</a> <!-- Busca o ID noticia-->

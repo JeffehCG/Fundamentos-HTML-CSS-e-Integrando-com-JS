@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Display</title>
+    <style>
+        /*Alguns elementos do CSS vem com o display bloqueado, e outros com outros especificos,
+            na hora de colocar o CSS isso pode atrabalhar, como veremos abaixo*/
+        body{
+            font-size: 40px;
+            color: #fff;
+            background-color: coral;
+        }
+
+        ul{padding: 0;}
+        div{background-color: seagreen;}
+        span{background-color: dodgerblue;}
+        li{background-color: purple;}
+
+        div, span, li {/* display do span não deixa surtir efeito desses propriedades*/
+            width: 50%; 
+            width: 200px;
+            height: 80px;
+            padding-top: 30px; /*essa propriedade funciona no display do span*/
+            text-align: center; /*essa propriedade funciona no display do span*/
+
+            /* Para resolver esses problemas do display*/
+            display: block; /* cada display em uma linha */
+            display: inline; /* cada display ficara na mesma linha, porem propriedades de widht e heigth seram descartados */
+            display: inline-block; /* mesma linha, e é considerado width e height */
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div>Texto 1</div>
+    <span>Texto 2</span>
+    <span>Texto 3</span>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+</body>
+
+</html>

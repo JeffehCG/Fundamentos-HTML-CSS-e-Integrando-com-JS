@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Texto</title>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <style>
+        /* ... */
+        * {
+            margin: 0;
+        }
+
+        html{
+            font-size: 28px;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        div{
+            font-size: 50px;
+        }
+
+        p{
+            /* Valores padrões da fonte*/
+            font-size: 1em;
+            font-size: 100%;
+            font-size: 16px;
+            font-size: 12pt;
+
+            /* Unidades absolutas */
+            font-size: 100px; /*Tamanho do pixel é relativo*/
+            font-size: 72pt; /*ponto, nesse caso equivalente a uma polegada*/
+            font-size: 1in; /*Polegada*/
+
+            /*Unidades relativas*/
+            font-size: 2.2em; /*em - vai pegar a referencia de font mais proxima e multiplicar pelo numero, nesse caso a div*/
+            font-size: 2.2rem; /*rem - vai pegar a referencia do html e multiplicar pelo numero*/
+            font-size: 50vh; /*vh - pega o tamanho da altura do view port, e divide por 100, ou seja, 50vh ira ser a metade*/
+            font-size: 10vw; /*vw - pega o tamnho da largura do view port*/
+
+            font-family: monospace;
+            font-family: Georgia, serif;
+            font-family: Verdana, sans-serif;
+            font-family: 'Indie Flower', cursive;
+
+            font-weight: 100; /*Peso da fonte*/
+            font-style: italic; /*Estilos fonte*/
+            text-transform: capitalize; /*Exemplo primeira letra maiuscula, todas letra maiusculas etc...*/
+            /* text-decoration: overline underline line-through; Linhas no texto */
+            word-spacing: 20px; /*Espaço entre as palavras*/
+            letter-spacing: 20px; /*Espaço entre as letras*/
+            line-height: 2.5em; /*Espalo entre as letras*/
+            text-align: center; /*posição do texto, pode ser left, center etc...*/
+
+        }
+
+        /* Transformando link em um botão */
+        .botao{
+            font-size: 28px;
+            text-decoration: none; /* Tirando a linha do botão */
+            padding: 10px 30px;
+            border-radius: 25px; /* borda arredondada*/
+        }
+
+        .destaque{
+            color: #fff;
+            background: tomato;
+            box-shadow: 2px 2px 1px 1px #000000; /* Sombra, para da efeito 3d*/
+        }
+
+        .destaque:active{ /*Tirando o sombreamento quando clicar, para dar efeito que clicou*/
+            box-shadow: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>
+            Que texto
+            <br>legal!!!
+        </p>
+    </div>
+    <a href="http://google.com" class="botao destaque">Google</a>
+</body>
+
+</html>

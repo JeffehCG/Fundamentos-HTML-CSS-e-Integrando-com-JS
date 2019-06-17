@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Altura e Largura</title>
+    <style>
+        /* A tag body por padrão ocupa a largura toda da pagina, porem a altura não,
+            ou seja, dependendo da propriedade ( height + % ) não ira acontecer nada 
+            assim tendo que utilizar o valor em px (pixels) */
+        
+        /* para considerar a porcentagem na propriedade
+            pode colocar um tamanho de 100% no body e no html */
+        html {
+            /* height: 100%; */
+        }
+
+        body {
+            font-size: 40px;
+            background-color: coral;
+            /* height: 100%; */
+        }
+
+        div {
+            background-color: seagreen;
+        }
+
+        span {
+            background-color: dodgerblue;
+        }
+
+        span, div {
+            width: 50%; /* Considerado pela div, porem não pelo span */
+            height: 50%; /* Não considerado por nenhum (pois o body é pequeno na altura, ou seja, 50% dele não ira ocorrer nada)*/
+            height: 250px; /*Considerado pela div, porem não pelo span */
+        }
+    </style>
+</head>
+
+<body>
+    <div>Título</div>
+    <span>Subtítulo</span>
+</body>
+
+</html>

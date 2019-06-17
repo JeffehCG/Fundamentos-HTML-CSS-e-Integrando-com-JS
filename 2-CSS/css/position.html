@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Position</title>
+    <style>
+        div{
+            font-size: 60px;
+            padding: 30px;
+            border: solid 5px #222;
+            color: #fff;
+        }
+
+        .static{ /*position padão*/
+            top:100px; /*Posição static não leva essa propriedade em concideração*/
+            left: 100px; /*Posição static não leva essa propriedade em concideração*/
+            background-color: steelblue;
+        }
+
+        .fixed{ /*Elementos com fixed ficam fixo na pagina. mesmo com a barra de rolagem*/
+            position: fixed;
+            bottom: 30px;
+            right: 0px;
+            background-color: tomato;
+        }
+
+        .relative1{ /*Leva em concideração o elemento anterior*/
+            position: relative;
+            left: 50px;
+            top: 5px;
+            background-color: seagreen;
+        }
+
+        .absolute1 { /*Não leva em consideração os elementos anteriores, assim passando por cima de outros elementos*/
+            position:absolute;
+            left: 350px;
+            top: 120px;
+            background-color: violet;
+        }
+
+        /* No caso abaixo, usando o relative no elemento pai, e o absolute no elemento filho
+            , o elemento absolute ficara absoluto dentro do pai, e não na pagina */
+        .relative2 {
+            position: relative;
+            left: 250px;
+            top: 2000px;
+            width: 200px;
+            height: 200px;
+            background-color: slategrey;
+        }
+
+        .absolute2{ 
+            position: absolute;
+            left:10px ;
+            top: 10px;
+            width: 20px;
+            height: 20px;
+            background-color: orange;
+        }
+
+        /* O sticky faz com que o elemento fique preso no top quando se rola a pagina para baixo */
+        .sticky{
+            position: -webkit-sticky; /*Safari - para o sticky funcionar no safari*/
+            position: sticky;
+            background-color: #777777;
+            top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="static">Static (Padrão)</div>
+    <div class="fixed">Fixed</div>
+    <div class="relative1">Relative</div>
+    <div class="absolute1">Absolute</div>
+
+    <div class="relative2">
+        <div class="absolute2"></div>
+    </div>
+
+    <div class="sticky">Sticky</div>
+    <p style="padding-bottom: 2000px;">Opa</p>
+</body>
+
+</html>

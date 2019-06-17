@@ -1,0 +1,4 @@
+npm i -g http-server = servidor http para node
+http-server . = executa o servidor na pasta que esta aberta
+http-server -p 9090 . = executa o servidor na pasta que esta aberta em outra porta
+http-server -c-1 . = desabilita o cach

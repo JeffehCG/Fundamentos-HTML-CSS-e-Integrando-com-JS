@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Herança</title>
+    <style>
+        /* Alguns atributos de herança não são passados automaticamente para os elementos filhos */
+        body{
+            font-family: monospace;
+            font-size: 40px;
+            border: solid 3px red; /*Não passa por herança*/
+            padding: 50px; /*Não passa por herança */
+        }
+
+        div{
+            border: inherit; /*inherit - para herdar determinado atributo*/
+            padding: inherit;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Herança</h1>
+    <div>Estou herdando</div>
+</body>
+
+</html>

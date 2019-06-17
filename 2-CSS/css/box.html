@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Box Model</title>
+    <style>
+        /* 
+            Diferença 
+            padding : Margens dentro do elemento (se aplica atributos css dentro do elemento)
+            margin : Margens fora do elemento (não se aplica atributos do css fora do elemento)
+            border : entre o padding e o margin 
+        */
+
+        body{font-size: 80px;}
+        .c1{background-color: orange;}
+        .c2{background-color: skyblue;}
+        .c3{background-color: tomato;}
+
+        div{
+            float: left; /*Elementos caem para esquerda, ou direita*/
+            padding-top: 100px; /*coloca o paddin apenas em cima*/
+            padding: 10px 50px 100px 150px; /*Começa de cima para direita*/
+            padding: 100px 50px; /*Aplica o primeiro valor em cima e em baixo , e o segundo valor nas laterais*/
+            padding: 50px; /*Mesmo padding para todos os lados*/
+            margin: 0px 20px;
+            border: solid 15px black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="c1">1</div>
+    <div class="c2">2</div>
+    <div class="c3">3</div>
+</body>
+
+</html>

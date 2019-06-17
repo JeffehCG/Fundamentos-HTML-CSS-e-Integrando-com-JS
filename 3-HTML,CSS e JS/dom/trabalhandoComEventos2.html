@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Trabalhando com Eventos #02</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class="conteudo exercicio">
+    <div>Elemento</div>
+    <script>
+        const item = document.querySelector('div')
+        item.style.position = 'absolute' //posição absoluta (conseguir pocisionar item de forma absoluta)
+
+        //Função para mover o elemento pela pagina usando o mouse
+        item.onmousemove = e =>{
+            const item = e.target  //e.target = quem disparou o evento, nesse caso foi a div
+            item.style.cursor = 'move' //altera o simbolo do curso quando estiver com o mouse emcima do elemento
+            
+            //e.buttons - evento que identifica se esta clicado o botão do mouse (0 = false , 1 = true)
+            if (e.buttons){
+                /* nessa linha abaixo é pego o elemento selecionado, "item.style.top"
+                    alterando o valor do top para o "e.clientY = (onde o cursor do mouse esta)" 
+                    menos o "item.clientHeight = (tamanho do elemento)" dividido por dois
+                    assim o cursor sempre ficara no meio do elementos, essa linha é para movimentação pra cima e pra baixo */
+                item.style.top = `${e.clientY - (item.clientHeight / 2)}px`
+                //Abaixo é feito a mesma coisa, porem agora para mexer paras laterais 
+                item.style.left = `${e.clientX- (item.clientWidth /2)}px`
+            }
+        } 
+    </script>
+</body>

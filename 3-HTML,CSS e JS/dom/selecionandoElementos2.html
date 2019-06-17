@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Selecionar Elementos #02</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body class="conteudo exercicio">
+    <div id="primeiro">#primeiro</div>
+    <div>Segundo</div>
+    <div class="terceiro ultimo"><span wb-attrib>.terceiro .ultimo</span></div>
+    <script>              
+        document.querySelector('#primeiro').classList.add('destaque') //com querySelector você deve colocar o # para entender que é um ID
+
+        // funcoes para adicionar e remover o 'destaque' dos elementos
+        const selecionar = selector =>
+            document.querySelectorAll(selector).forEach(e => e.classList.add('destaque')) //diferente da aulta passada, o querySelector não precisa converter em array para utilizar o array           
+        const deselecionar = selector =>                                                  //(ps: para usar reduce, filter etc... é preciso converter)
+            document.querySelectorAll(selector).forEach(e => e.classList.remove('destaque'))       
+
+        selecionar('div') //selecionando todas div
+
+        deselecionar('*') //deselecionando todos elementos
+        selecionar('.terceiro.ultimo') //selecionando elemento que tem as duas classes     
+
+        deselecionar('*')
+        selecionar(':not(#primeiro)') //selecionando todos elementos que não tenham ID primeiro
+
+        deselecionar('*')
+        selecionar(':nth-child(1)') //seleciona todos os primeiros elementos filhos
+
+        deselecionar('*')
+        selecionar('div:nth-child(1)') //selecionar todos os primeiros elementos filhos que sejam div
+
+        deselecionar('*')
+        selecionar('[wb-attrib]') //selecionando pelo atributo
+
+        
+    </script>
+</body>
+</html>

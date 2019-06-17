@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Um Pouco de CSS</title>
+    <style>
+        /*CSS TAGs*/
+        h1{
+            /*desabilita da pagina todos h1*/
+            /*display:none;*/ 
+
+            /*Deixa fundo vermelho*/
+            background-color: red;
+            
+            /* muda posição na pagina*/
+            position: absolute;
+            top: 400px;
+            right: 100px;
+            
+            /*muda tamanho da fonte*/
+            font-size: 20px;
+        }
+
+        /*CSS Classe*/
+        .fundoVermelho{
+            background-color: #C00 ;
+        }
+
+        .negrito {
+            font-weight: bold;
+        }
+        
+        /*CSS ID*/
+        #textoPrincipal{
+            font-size: 40px;
+            font-weight: bold; /*Negrito*/
+            background-color: black;
+            color: white; /*Cor da fonte*/
+            padding: 10px; /*Espaçamento*/
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS</h1><br>
+    <span id = "textoPrincipal">Texto 1</span><br>
+    <span class="fundoVermelho negrito">Texto 2</span><br>
+    <span class="fundoVermelho">Texto 3</span>
+</body>
+</html>

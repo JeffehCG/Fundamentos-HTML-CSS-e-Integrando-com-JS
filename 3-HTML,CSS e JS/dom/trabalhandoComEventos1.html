@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Trabalhando com Eventos #01</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class="conteudo exercicio">
+    <div>
+            <!-- onclick="navegarEm5s(event)" --><!--onclick - evento de click do usuario-->
+        <a evento-de-click href="https://google.com.br" >Google</a>
+    </div>
+    <script>
+        //Função para depois do clique esperar 5s para ir para o google
+        function navegarEm5s(e) {
+            e.preventDefault() //Evita o comportamento padrão, que seria viajar para o google
+            console.log('Saindo em 5s...')
+            setTimeout(() => {
+                const link = e.target //link clicado
+                window.location.href = link.href //substituindo o link para o link clicado
+            }, 5000); //5 segundos para desparar essa função
+        }
+
+        // Os eventos podem ser colocados diretamente na teg como esta comentado em cima
+        // Ou feito a estrategia abaixo
+        // const a = document.querySelector('a')
+
+        const a = document.querySelector('[evento-de-click]') //procurando elemento pelo atributo criado 
+        a.onclick = navegarEm5s //adiciona evento onclick com a função navegarEm5s
+
+    </script>
+</body>

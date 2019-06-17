@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Trabalhando com Eventos #04</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        form input,
+        form select,
+        form button {
+            margin: 10px;
+            font-size: 1.6em;
+        }
+    </style>
+</head>
+
+<body class="conteudo exercicio">
+    <h1>Formulário</h1>
+    <form name="pesquisa" action="http://www.google.com.br/search">
+        <input type="text" name="q" placeholder="Digite o termo...">
+        <select name="hl">
+                <option value="pt-br">Português (Brasil)</option>
+                <option value="en-us">Inglês (Americano)</option>
+            </select>
+        <button wm-submit>Pesquisar</button>
+    </form>
+    <script>
+            // COM ONCLICK
+
+        const submit = document.querySelector('[wm-submit]')
+        submit.onclick = function(e){
+            e.preventDefault()
+
+            const form = e.target.parentNode //pega o pai do button, ou seja, o form
+            const formData = new FormData(form) //FormData - consegue os dados do formulario
+            formData.append('ajax',true) //adicionou uma nova informação ao FormData
+            console.log(formData.get('q')) //pegar o valor que esta dentro do campo q
+            console.log(formData.has('hl')) //verificar se determinado campo esta contido no form
+
+            for (let dado of formData){ //exibindo os dados do formulario
+                console.log(dado)
+            }
+            //colocar let, pois se não a variavel dado vai esta disponivel fora do escopo for
+        }
+
+            // COM SUBMIT 
+            
+        // const form = document.forms[0]
+        // form.onsubmit = function(e){
+        //     e.preventDefault()
+
+        //     const form = e.target
+        //     const formData = new FormData(form) 
+        //     formData.append('ajax',true) 
+        //     console.log(formData.get('q')) 
+        //     console.log(formData.has('hl'))
+
+        //     for (let dado of formData){ 
+        //         console.log(dado)
+        //     }
+            
+        // }
+    </script>
+</body>

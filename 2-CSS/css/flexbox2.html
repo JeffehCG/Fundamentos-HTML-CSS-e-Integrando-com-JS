@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox #02</title>
+    <link rel="stylesheet" href="css/tag.css">
+    <style>
+        .flex-container div{
+            box-sizing: border-box;
+        }
+
+        .flex-container{
+            display: flex;
+            height: 300px;
+            width: 600px;
+        }
+
+        .flex-container div:nth-child(3){ /*Pegando o terceiro filho*/
+            background-color: indianred;
+            /*Manipulando a ordem de um elemento */
+            /* Elementos do flex vem com uma ordem padrão 0,
+                os elementos com maior valor na ordem são ordenados por ultimo */
+            order: 1; /*Ordenando por ultimo*/
+            order: 0;
+            order: -1;/*Ordenando primeiro*/
+            align-self: center; /*Ordenando no centro*/
+            align-self: flex-end; /*Final*/
+            align-self: flex-start; /*Começo*/
+            align-self: stretch; /*padrao*/
+        }
+
+        .flex-container div{
+            width: 100px;
+            flex-grow: 0; /*O flex grow identifica o sobrando do flex, e distribui para os itens igualmente*/
+            flex-grow: 1; 
+        }
+
+        .flex-container div:nth-child(1){
+            flex-grow: 2; /*Almentando o tamanho do primeiro item por dois, ou seja, ele ficar maior que os outros itens*/
+        }
+
+        .flex-container{
+            width: 300px;
+            flex-shrink: 1; /*Igual o flex grow, porem ele diminui*/
+        }
+
+        .flex-container div:nth-child(1){
+            flex-shrink: 5; /*Nessa caso o primeiro elemento ficara menor que os outros*/
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-container tag nolabel">
+        <div class="tag nolabel">1</div>
+        <div class="tag nolabel">2</div>
+        <div class="tag nolabel">3</div>
+        <div class="tag nolabel">4</div>
+    </div>
+    <script src="js/tag.js"></script>
+</body>
+
+</html>

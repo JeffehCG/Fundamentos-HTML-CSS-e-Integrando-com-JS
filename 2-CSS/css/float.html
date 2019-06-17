@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Float</title>
+    <style>
+        /* Não exagerar no uso do Float 
+            ele faz os elementos flutuarem na pagina
+            porem quando isso ocore esse elemento é desconsiderado dos outros
+            para resolver isso é utilizado o clear*/
+
+        body {
+            background-color: #222;
+        }
+
+        .c1 {
+            background-color: red;
+            float: right;
+        }
+
+        .c2 {
+            background-color: green;
+            clear: right; /*Limpa o float da direita*/
+            float: left;
+        }
+        
+        .c3 {
+            background-color: blue;
+            clear: left; /*Limpa o float da esquerda*/
+            float: right;
+        }
+
+        .c4 {
+            background-color: orange;
+            clear: both; /*Limpa o float nos dois sentidos*/
+            float: left;
+        }
+
+        div{
+            height: 150px;
+            width: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="c1"></div>
+    <div class="c2"></div>
+    <div class="c3"></div>
+    <div class="c4"></div>
+</body>
+
+</html>
